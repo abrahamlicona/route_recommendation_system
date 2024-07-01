@@ -42,21 +42,21 @@ This file contains the core logic for calculating route recommendations based on
    $\[
    S = \arg\max_{s \in \text{candidates}} \text{Count}(s)
    \]$
-   where $\(\text{candidates} = \{t \mid t[:\text{len}(p)] = p, t \in \text{trajectories}\}\)$.
+   where $$\(\text{candidates} = \{t \mid t[:\text{len}(p)] = p, t \in \text{trajectories}\}\)$$.
 
 2. **Finding the Most Common Next Element:**
    Given a prefix $\( p \)$, find the most common next element $\( e \)$ in the trajectories:
    $\[
    e = \arg\max_{e \in \text{nextelements}} \text{Count}(e)
    \]$
-   where $\(\text{nextelements} = \{t[i+\text{len}(p)] \mid t[i:i+\text{len}(p)] = p, t \in \text{trajectories}, 0 \leq i < \text{len}(t) - \text{len}(p)\}\)$.
+   where $$\(\text{nextelements} = \{t[i+\text{len}(p)] \mid t[i:i+\text{len}(p)] = p, t \in \text{trajectories}, 0 \leq i < \text{len}(t) - \text{len}(p)\}\)$$.
 
 3. **Finding the Recommended Route:**
-   Extend the input sequence \( r \) to the desired length \( n \):
-   \[
-   r' = r + [\text{next\_element}(r)]
-   \]
-   until \(\text{len}(r') = n\), where \(\text{next\_element}(r)\) is found using the most common next element method.
+   Extend the input sequence $\( r \)$ to the desired length $\( n \)$:
+   $$\[
+   r' = r + [\text{nextelement}(r)]
+   \]$$
+   until $\(\text{len}(r') = n\)$, where $\(\text{nextelement}(r)\)$ is found using the most common next element method.
 
 ### help_functions.py
 
