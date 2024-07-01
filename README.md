@@ -1,6 +1,6 @@
 # Route Recommendation System
 
-This repository contains a route recommendation system based on sequence occurrence. The system analyzes a set of trajectories and recommends the most likely continuation for a given input route. 
+This repository contains a route recommendation system based on sequence occurrence. The system analyzes a set of trajectories and recommends the most likely continuation for a given input prefix. 
 
 ## Repository Structure
 
