@@ -38,11 +38,11 @@ This file contains the core logic for calculating route recommendations based on
 ##### Mathematical Formulas
 
 1. **Finding the Most Common Sequence with a Prefix:**
-   Given a prefix $$\( p \)$$, find the most common sequence $$\( S \)$$ in the trajectories:
-   $$\[
+   Given a prefix $\( p \)$, find the most common sequence $\( S \)$ in the trajectories:
+   $\[
    S = \arg\max_{s \in \text{candidates}} \text{Count}(s)
-   \]$$
-   where \(\text{candidates} = \{t \mid t[:\text{len}(p)] = p, t \in \text{trajectories}\}\).
+   \]$
+   where $\(\text{candidates} = \{t \mid t[:\text{len}(p)] = p, t \in \text{trajectories}\}\)$.
 
 2. **Finding the Most Common Next Element:**
    Given a prefix \( p \), find the most common next element \( e \) in the trajectories:
