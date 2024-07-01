@@ -47,9 +47,9 @@ This file contains the core logic for calculating route recommendations based on
 2. **Finding the Most Common Next Element:**
    Given a prefix $\( p \)$, find the most common next element $\( e \)$ in the trajectories:
    $\[
-   e = \arg\max_{e \in \text{next\_elements}} \text{Count}(e)
+   e = \arg\max_{e \in \text{nextelements}} \text{Count}(e)
    \]$
-   where $\(\text{next\_elements} = \{t[i+\text{len}(p)] \mid t[i:i+\text{len}(p)] = p, t \in \text{trajectories}, 0 \leq i < \text{len}(t) - \text{len}(p)\}\)$.
+   where $\(\text{nextelements} = \{t[i+\text{len}(p)] \mid t[i:i+\text{len}(p)] = p, t \in \text{trajectories}, 0 \leq i < \text{len}(t) - \text{len}(p)\}\)$.
 
 3. **Finding the Recommended Route:**
    Extend the input sequence \( r \) to the desired length \( n \):
